@@ -1,4 +1,5 @@
-from __future__ import annotations  # для поддержки аннотаций собственного класса внутри методов
+from __future__ import annotations
+
 
 class Distance:
     def __init__(self, km: float) -> None:
@@ -36,7 +37,6 @@ class Distance:
             return Distance(round(self.km / other, 2))
         return NotImplemented
 
-    # Сравнения
     def __lt__(self, other: Distance | float) -> bool:
         if isinstance(other, Distance):
             return self.km < other.km
